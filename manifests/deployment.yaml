@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prometheus-deployment
+  labels:
+    app: prometheus-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prometheus-demo
+  template:
+    metadata:
+      labels:
+        app: prometheus-demo
+    spec:
+      containers:
+        - name: prometheus-app
+          image: pkbhowmick/prometheus-example-app:0.1.2
+          ports:
+            - containerPort: 8080
+
+
+
