@@ -16,9 +16,8 @@ spec:
     spec:
       containers:
         - name: prometheus-app
-          image: pkbhowmick/prometheus-example-app:0.1.2
+          image: pkbhowmick/go-rest-api-with-prometheus:0.1.1
           ports:
             - containerPort: 8080
-
 
 
